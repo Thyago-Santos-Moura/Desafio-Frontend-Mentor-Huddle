@@ -1,0 +1,205 @@
+body{
+    background: url(/src/images/bg-desktop.svg) no-repeat;
+    background-color:  hsl(257, 40%, 49%) ;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.project{
+    display: grid;
+    grid: "header" 170px "main" auto "footer" 100px;
+}
+
+.header{
+    grid-area: header;
+    display: flex;
+    align-items: center;
+}
+
+.header .conteiner{
+    margin-left: 70px;
+}
+
+.header .conteiner img{
+    width: 215px;
+}
+
+.main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.main img{
+    margin-top: 23px;
+    margin-left: 73px;
+}
+
+.main .description{
+    margin-top: 65px;
+    margin-left: 53px;
+    max-width: 510px;
+}
+
+.main .description h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+}
+
+.main .description p{
+    font-size: 18px;
+    margin-top: 24px;
+}
+
+.main .description a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 27px;
+    width: 200px;
+    height: 55px;
+    color:  hsl(257, 40%, 49%);
+    margin-top: 30px;
+    font-size: 19px;
+    transition: 0.3s;
+}
+
+.main .description a:hover{
+    background-color: hsl(300, 69%, 71%);
+    color: #fff;
+}
+
+.footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 72px;
+    
+}
+
+.footer a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    color:#fff;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+    margin-bottom: 29px;
+    transition: 0.3s;
+}
+
+.footer a:hover{
+    color: hsl(300, 81%, 59%);
+    border-color: hsl(300, 81%, 59%);
+}
+
+.footer a .fa-instagram{
+    font-size: 22px;
+}
+
+@media (max-width: 1024px){
+    .project{
+        grid: "header" 120px "main" auto "footer" 100px;
+    }
+
+    .main img{
+        margin-left: 10px;
+    }
+
+    .main .description{
+        margin-top: 45px;
+        margin-left: 23px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main .description a{
+        margin-left: -23px;
+    }
+    
+}
+
+@media (max-width: 768px){
+    body{
+        background: url(/src/images/bg-mobile.svg) no-repeat;
+        background-color:  hsl(257, 40%, 49%) ;
+        background-size: 100% 750px;
+    }
+
+    .project{
+        grid: "header" 200px "main" 1185px "footer" 215px;
+    }
+
+    .header .conteiner img{
+        width: 255px;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    .main img{
+        margin-left: 0px;
+        margin-top: 50px;
+        width: 600px
+    }
+
+    .main .description{
+        margin-top: 120px;
+        margin-left: 0px;
+        max-width: 620px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main .description h2{
+        font-size: 47px;
+        text-align: center;
+    }
+    
+    .main .description p{
+        font-size: 33px;
+        line-height: 50px;
+        margin-top: 24px;
+        text-align: center;
+    }
+    
+    .main .description a{
+        border-radius: 40px;
+        width: 400px;
+        height: 80px;
+        margin-top: 40px;
+        font-size: 25px;
+        margin-left: 0px;
+    }
+
+    .footer{
+        justify-content: center;
+        align-items: center;
+        padding-right: 0px;
+    }
+    
+    .footer a{
+        --tamanhoborda: 55px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        width: var(--tamanhoborda);
+        height: var(--tamanhoborda);
+        margin: 11px;
+        font-size: 24px;
+    }
+
+    .footer a .fa-instagram{
+        font-size: 30px;
+    }
+} 
