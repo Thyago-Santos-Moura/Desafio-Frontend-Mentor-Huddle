@@ -3,6 +3,10 @@ body{
     background-color:  hsl(257, 40%, 49%) ;
     color: white;
     font-family: 'Open Sans', sans-serif;
+    background-size: cover;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
 .project{
@@ -33,11 +37,12 @@ body{
 .main img{
     margin-top: 23px;
     margin-left: 73px;
+    max-width: 100%;
 }
 
 .main .description{
     margin-top: 65px;
-    margin-left: 53px;
+    margin-left: 115px;
     max-width: 510px;
 }
 
@@ -51,7 +56,7 @@ body{
     margin-top: 24px;
 }
 
-.main .description a{
+.main .description button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,9 +68,10 @@ body{
     margin-top: 30px;
     font-size: 19px;
     transition: 0.3s;
+    box-shadow: 5px 5px 10px #0000007c;
 }
 
-.main .description a:hover{
+.main .description button:hover{
     background-color: hsl(300, 69%, 71%);
     color: #fff;
 }
@@ -119,7 +125,7 @@ body{
         align-items: center;
     }
 
-    .main .description a{
+    .main .description button{
         margin-left: -23px;
     }
     
@@ -133,29 +139,24 @@ body{
     }
 
     .project{
-        grid: "header" 200px "main" 1185px "footer" 215px;
-    }
-
-    .header .conteiner img{
-        width: 255px;
+        grid: "header" 200px "main" auto "footer" 215px;
     }
 
     .main{
         display: flex;
         flex-direction: column;
-        grid-template-columns: 1fr;
         align-items: center;
     }
 
     .main img{
         margin-left: 0px;
         margin-top: 50px;
-        width: 600px
+        max-width: 90%;
     }
 
     .main .description{
         margin-top: 120px;
-        margin-left: 0px;
+        margin: 10px;
         max-width: 620px;
         display: flex;
         flex-direction: column;
@@ -174,7 +175,7 @@ body{
         text-align: center;
     }
     
-    .main .description a{
+    .main .description button{
         border-radius: 40px;
         width: 400px;
         height: 80px;
@@ -203,3 +204,9 @@ body{
         font-size: 30px;
     }
 } 
+
+@media (max-width: 420px){
+    .main .description button{
+        width: 200px;
+    }
+}
